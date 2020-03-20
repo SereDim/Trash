@@ -64,12 +64,12 @@ m='Тут шота написано'#наше предлож
 n='шота написано'#искаемое предлож
 o=-1
 p=0
-while (p<len(n)) and o<(len(m)-len(n)):
+while (p<len(n)) and o<(len(m)-len(n)):#пока искаемое больше вообще возможного и количества итераций 
     p=0
     o+=1
-    while p<len(n) and n[p]==m[p+o]:
+    while p<len(n) and n[p]==m[p+o]:#пока проходит прошлый ваил, мы ищим есть ли продолжение
         p+=1
-if (p==len(n)):
+if (p==len(n)):#если размер равен найденному то итер заканчивается
     print(f'Substring is found {o}')
 else:
     print('Nothing')
