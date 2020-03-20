@@ -21,39 +21,39 @@
 #1 Линейный
 import numpy
 import random
-a=numpy.zeros(10,dtype=int)
+a=numpy.zeros(10,dtype=int)#делаем массив
 b=5
-for c in range(10):
-    a[c]=random.randint(-5,5)
+for c in range(10):#циклим рандом
+    a[c]=random.randint(-5,5)#собсна рандом
 print(a)
 
-d=len(a)
+d=len(a)#размер массива
 e=0
-while e<d and a[e]!=b:
-    e+=1
+while e<d and a[e]!=b:#пока счетчик не будет больше размера нашего масива
+    e+=1#счетчик который с каждой итерацией увелич
 
-if e==d:
+if e==d:#если равен то не найден
     print('Nothing')
-else:
+else:#в противоположн случ останавливается на это знач как на его месте
     print(f'Element - {b}; place - {e}')
 #2 Бинарный
-f=numpy.zeros(10,dtype=int)
+f=numpy.zeros(10,dtype=int)#делаем массив
 g=4
 for h in range(10):
-    f[h]=random.randint(0,5)
+    f[h]=random.randint(0,5)#также рандомим
 print(f)
-f=sorted(f)
-i=0
-j=len(f)-1
+f=sorted(f)#бинарный работает толбко в отсортированом
+i=0#левая граница
+j=len(f)-1#правая граница
 k=0
 l=False
 while i<=j and not l:
-    k=(i+j)//2
-    if f[k]==g:
+    k=(i+j)//2#средина массива
+    if f[k]==g:#проверка если сред знач равно искаемому
         l=True
-    elif f[k]<g:
+    elif f[k]<g:если среднее значение меньше за искаемое то левая граница сместится в право
         i=k+1
-    else:
+    else:#если наоборот то правая влево
         j=k-1
 if not l:
     print('Nothing')
