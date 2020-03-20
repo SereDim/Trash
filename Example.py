@@ -60,11 +60,11 @@ if not l:
 else:
     print(f'Element - {g} place - {k}')
 #3 Подстрока в строке
-m='Тут шота написано'
-n='шота написано'
+m='Тут шота написано'#наше предлож
+n='шота написано'#искаемое предлож
 o=-1
 p=0
-while (p<len(n)) and o<(len(m)-len(n)):
+while (p<len(n)) and o<(len(m)-len(n)):;
     p=0
     o+=1
     while p<len(n) and n[p]==m[p+o]:
