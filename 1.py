@@ -104,16 +104,16 @@ def r(s):#
         s[t],s[u]=s[u],s[t]#и меняет их местами
 
 #insertion sort
-def w(arrayToSort):
-    a = arrayToSort
-    for i in range(len(a)):
-        v = a[i]
-        j = i
-        while (a[j-1] > v) and (j > 0):
-            a[j] = a[j-1]
-            j = j - 1
-        a[j] = v
-    return a
+def w(arrayToSort):#функция
+    a = arrayToSort#быстрая замена
+    for i in range(len(a)):#диапазон
+        v = a[i]#быстрая замена за индексом
+        j = i#приравниваем значения
+        while (a[j-1] > v) and (j > 0):#пока значения с индексом  j-1 больше числа за индексом по итерации и оно больше 0
+            a[j] = a[j-1]#уменьшаем двигемся влево
+            j = j - 1#уменьшаем значение
+        a[j] = v#приравниваем обратно когда выходим с цыкла
+    return a#возвращаем отсортированный список
 
 def af(k):#bubble sort в обратном направлении
     m=0
