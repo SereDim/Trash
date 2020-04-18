@@ -13,7 +13,7 @@ for b in range(10):#
     a.append(b)#заносим все в массив
 for d in range(len(a)):#проходимся по массиву
     if a[d]==c:#находим место маленького элемента
-        a=a[d+1:]#режим все к ....
+        a=a[d+1:]#режим все
         for e in range(len(a)):#
             f=a[e]+f#сумма
         break#
